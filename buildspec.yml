@@ -12,7 +12,8 @@ phases:
     commands:
       - echo "Copying static files to output artifact..."
       - ls -la
-      - cp -r $(pwd)/* $(pwd)/artifacts/  
+      - shopt -s dotglob
+      - cp -r ./* artifacts/ || {echo "Copy failed"; exit 1;}  
 artifacts:
   files:
     - '**/*' 
