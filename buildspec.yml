@@ -5,7 +5,6 @@ phases:
     commands:
       - echo "No special install commands for static website"
       - mkdir -p artifacts
-      - chmod 755 artifacts  
   pre_build:
     commands:
       - echo "No pre-build steps for static website"
