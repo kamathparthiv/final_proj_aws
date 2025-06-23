@@ -5,13 +5,15 @@ phases:
     commands:
       - echo "No special install commands for static website"
       - mkdir -p artifacts
+      - chmod 755 artifacts  
   pre_build:
     commands:
       - echo "No pre-build steps for static website"
   build:
     commands:
       - echo "Copying static files to output artifact..."
-      - cp -r ./* artifacts/ 
+      - ls -la
+      - cp -r $(pwd)/* $(pwd)/artifacts/  
 artifacts:
   files:
     - '**/*' 
