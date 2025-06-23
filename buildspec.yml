@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "No special install commands for static website"
+  pre_build:
+    commands:
+      - echo "No pre-build steps for static website"
+  build:
+    commands:
+      - echo "Copying static files to output artifact..."
+      - cp -r ./* artifacts/ 
+artifacts:
+  files:
+    - '**/*' 
+  base-directory: 'artifacts' 

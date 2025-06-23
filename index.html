@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Static Website</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        h1 { color: #333; }
+        p { color: #666; }
+    </style>
+</head>
+<body>
+    <h1>Hello! This is mimi and she is her to tell you what the time is!</h1>
+    <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fcats&psig=AOvVaw3BpAwN6Q3ux1K5HNUljLB_&ust=175050>
+    <p>The current time is <span id="current-time"></span></p>
+
+    <script>
+        document.getElementById('current-time').innerText = new Date().toLocaleString();
+    </script>
+</body>
+</html>
