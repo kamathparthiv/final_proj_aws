@@ -3,18 +3,16 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo "No special install commands for static website"
-      - mkdir -p artifacts
+      - echo "Start building ..."
   pre_build:
     commands:
-      - echo "No pre-build steps for static website"
+      - echo "Build complete, prepare artifact"
   build:
     commands:
       - echo "Copying static files to output artifact..."
-      - ls -la
-      - shopt -s dotglob
-      - cp -r ./* artifacts/ || {echo "Copy failed"; exit 1;}  
 artifacts:
   files:
     - '**/*' 
-  base-directory: 'artifacts' 
+  base-directory: '.'
+  discard-paths: yes
+  name: my-little-artifact
