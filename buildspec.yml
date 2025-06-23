@@ -4,6 +4,7 @@ phases:
   install:
     commands:
       - echo "No special install commands for static website"
+      - mkdir -p artifacts
   pre_build:
     commands:
       - echo "No pre-build steps for static website"
